@@ -1,0 +1,110 @@
+.content {
+  background-color: #f1f6fc;
+  text-align: center;
+}
+
+.content .container {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content--blueBackround {
+  background-color: #215398;
+  position: relative;
+}
+
+.content--blueBackround > ::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ff3859;
+  bottom: -16px;
+  left: 50%;
+}
+
+.content__interior {
+  width: 90%;
+  color: #2d3236;
+}
+
+.content__interior h1 {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  margin-bottom: 5px;
+}
+
+.content__interior > p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  padding-bottom: 36px;
+}
+
+.content__interior h2 {
+  font-size: 1.875rem;
+  padding-bottom: 24px;
+}
+
+.content__interior--headingWhite {
+  color: white;
+}
+
+.content__interior__wrapper {
+  padding: 0 60px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2%;
+}
+
+@media (min-width: 786px) {
+  .content__interior__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    row-gap: 2%;
+  }
+}
+
+.arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.arrow--right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=content.css.map */

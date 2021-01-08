@@ -1,0 +1,72 @@
+$blue: rgba(33, 83, 152, 1)
+$lightBlue: rgba(241, 246, 252, 1)
+$black: rgba(45, 50, 54, 1)
+
+.content
+    background-color: $lightBlue
+    text-align: center
+    .container
+        padding-top: 50px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        
+
+.content--blueBackround
+    background-color: $blue
+    position: relative
+    >::after 
+        content: ''
+        position: absolute
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        background-color: rgba(255, 56, 89, 1)
+        bottom: -16px;
+        left: 50%;
+
+
+
+.content__interior
+    width: 90%
+    color: $black
+    h1
+        font-size: 2.5rem
+        line-height: 3.25rem
+        margin-bottom: 5px
+    > p
+        font-size: 1.25rem
+        line-height: 2rem
+        padding-bottom: 36px
+    h2
+        font-size: 1.875rem
+        padding-bottom: 24px
+
+
+.content__interior--headingWhite
+    color: rgba(255, 255, 255 , 1)
+
+.content__interior__wrapper
+    padding: 0 60px 60px
+    display: flex
+    flex-direction: column
+    gap: 2%
+
+@media ( min-width: 786px )
+    .content__interior__wrapper
+        flex-direction: row
+        row-gap: 2%
+
+.arrow
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 48px
+    width: 48px
+    border-radius: 50%
+    &:hover
+        background-color: rgba(255, 255, 255, 0.05)
+
+.arrow--right
+    transform: rotate(180deg)

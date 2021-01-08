@@ -1,0 +1,47 @@
+.box {
+  background-color: white;
+  width: 100%;
+  padding-bottom: 66%;
+  position: relative;
+}
+
+@media (min-width: 786px) {
+  .box {
+    width: 32%;
+    padding-bottom: 21%;
+  }
+}
+
+.box__content {
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box__content h3 {
+  max-width: 80%;
+  margin-top: 2.25rem;
+  font-size: 1.25rem;
+  color: #2d3236;
+}
+
+.box__content p {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  max-width: 80%;
+  color: gray;
+}
+
+.box__content img {
+  padding: 12px;
+}
+/*# sourceMappingURL=box.css.map */
