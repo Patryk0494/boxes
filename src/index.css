@@ -1,8 +1,18 @@
+html {
+  font-size: 12px;
+}
+
 body {
   margin: 0;
   font-family: Rubik, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 520px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 code {

@@ -2,6 +2,7 @@ import React from 'react';
 import './content.css';
 import Box from '../Box/Box';
 
+
 const boxData = [
     {
         heading: "Heading",
@@ -18,45 +19,66 @@ const boxData = [
     },
 ];
 
-let width = Screen.availWidth;
+let data = boxData;
 
 class ContentSlider extends React.Component {
     constructor(props){
         super(props);
-        this.state = {data:boxData}
+        this.state = {data: data}
+        this.indexDecreas = this.indexDecreas.bind(this);
+        this.indexIncreas = this.indexIncreas.bind(this);
     }
 
-    
 
-    // changeSize(){
-    //     if (width < 786) {
-    //         this.setState({data: boxData.splice(1,2)})
+    indexDecreas() {
+    //     console.log(boxData[0])
+    //     console.log(boxData[1])
+    //     console.log(boxData[2])
+    //     this.state.data.map((element, index, arr) => {
+    //     if (index-1 < 0) {
+    //         arr[index] = this.state.data[this.state.data.length-1]
+    //         return this.setState({data: data[0]=arr[index]})
     //     } else {
-    //         this.setState({data: boxData})
+    //         arr[index] = this.state.data[index-1]
+    //         return this.setState({data: data[index]=arr[index]})
     //     }
-    // }    
+    // })
+        let { data } = this.state
+        for (let i = 0; i < data.length; i++) {
+            console.log(data)
+            if ( i === 0 ) {
+                return this.setState({data : data[0] = this.state.data[this.state.data.length-1]})
+            } 
+            data[i] = this.state.data[i-1];
+            return this.setState({data: data})
+        }
+        console.log(data);
+    }
 
-    // componentDidMount(){
-    //     window.addEventListener('resize',this.changeSize);
-    // }
-    // componentWillUnmount(){
-    //     window.removeEventListener('resize',this.changeSize);
-    // }
+
+    indexIncreas() {
+        console.log(boxData[0])
+        boxData.map((element, index) => {
+        if (index+1 > boxData.length) {
+        return element[index] = element[0]
+        }
+        return element[index]=element[index+1]
+    })
+    }
 
     render(){
-        // let {data} = this.state
         return(
             <section className="content content--blueBackround">
                 <div className="container">
-                    <div className="arrow"><img src="./assets/arrow.svg" alt="arrow left" /></div>
+                    <div className="arrow" onClick={this.indexDecreas}><img src="./assets/arrow.svg" alt="arrow left" /></div>
                     <div className="content__interior  content__interior--headingWhite">
                         <h1>Heading</h1>
                         <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit.</p>
                         <div className="content__interior__wrapper">
-                            <Box boxData={boxData}></Box>
+                            <Box boxData={data}></Box>
                         </div>
                     </div> 
-                    <div className="arrow"><img className="arrow--right" src="./assets/arrow.svg" alt="arrow right" /></div>
+                    <div className="arrow" onClick={this.indexIncreas}><img className="arrow--right" src="./assets/arrow.svg" alt="arrow right" /></div>
                 </div>
             </section>
         )    

@@ -24,12 +24,12 @@ $black: rgba(45, 50, 54, 1)
         border-radius: 50%
         background-color: rgba(255, 56, 89, 1)
         bottom: -16px;
-        left: 50%;
+        left: calc( 50% - 16px );
 
 
 
 .content__interior
-    width: 90%
+    width: 98%
     color: $black
     h1
         font-size: 2.5rem
@@ -42,21 +42,22 @@ $black: rgba(45, 50, 54, 1)
     h2
         font-size: 1.875rem
         padding-bottom: 24px
+    &--headingWhite
+        color: rgba(255, 255, 255 , 1)
+    &__wrapper
+        padding: 0 10px 60px
+        display: flex
+        flex-direction: column
 
-
-.content__interior--headingWhite
-    color: rgba(255, 255, 255 , 1)
-
-.content__interior__wrapper
-    padding: 0 60px 60px
-    display: flex
-    flex-direction: column
-    gap: 2%
+@media (min-width: 520px) 
+    .content__interior
+        width: 90%
+        &__wrapper
+            padding: 0 60px 60px
 
 @media ( min-width: 786px )
     .content__interior__wrapper
         flex-direction: row
-        row-gap: 2%
 
 .arrow
     display: flex

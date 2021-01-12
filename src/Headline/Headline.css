@@ -1,5 +1,5 @@
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -9,13 +9,13 @@
 
 @media (min-width: 420px) {
   .container {
-    width: 95%;
+    width: 90%;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .container {
-    width: 90%;
+    width: 1120px;
   }
 }
 /*# sourceMappingURL=Headline.css.map */
